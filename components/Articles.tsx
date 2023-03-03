@@ -25,7 +25,7 @@ export default function Articles({}: Props) {
             </Link>
           </div>
           <Image
-            className='absolute bottom-0 hidden'
+            className='absolute bottom-0 hidden lg:block'
             src={Shapes}
             alt='shapes'
           />
