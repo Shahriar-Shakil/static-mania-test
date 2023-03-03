@@ -1,7 +1,9 @@
 import React from 'react';
+import Articles from '../Articles';
 import Link from '../buttons/Link';
 import CTA from '../CTA';
 import Features from '../Features';
+import Footer from '../Footer';
 import RecentEpisodes from '../RecentEpisodes';
 
 type Props = {};
@@ -31,6 +33,8 @@ export default function HomePage({}: Props) {
       <CTA />
       <Features />
       <RecentEpisodes />
+      <Articles />
+      <Footer />
     </>
   );
 }

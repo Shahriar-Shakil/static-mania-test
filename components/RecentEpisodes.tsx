@@ -25,7 +25,7 @@ export default function RecentEpisodes({}: Props) {
           label='See All Episode'
         />
       </div>
-      <div className='mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+      <div className='mt-16 grid grid-cols-2 gap-4  lg:grid-cols-3'>
         {EpisodeData?.map((episode) => (
           <EpisodeCard episode={episode} />
         ))}

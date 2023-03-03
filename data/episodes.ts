@@ -1,6 +1,8 @@
 import { EpisodeListType } from './../ts/types';
 import image1 from "../public/images/episodes/1.png"
 import image2 from "../public/images/episodes/2.png"
+import news1 from "../public/images/news/1.png"
+import news2 from "../public/images/news/2.png"
 import image3 from "../public/images/episodes/3.png"
 
 
@@ -27,4 +29,21 @@ let EpisodeData: EpisodeListType = [
 
 
 ]
-export { EpisodeData }
+let newsData: EpisodeListType = [
+    {
+        id: 1,
+        label: "Getting the first 100 customers for your business",
+        description: "Lorem ipsum at vero eos et accusam et justo duo dolores et ea rebum.",
+        logo: news1
+    },
+    {
+        id: 2,
+        label: "Apparently we had reached a great height in the atmosphere, ...",
+        description: "Lorem ipsum at vero eos et accusam et justo duo dolores et ea rebum.",
+        logo: news2
+    },
+
+
+
+]
+export { EpisodeData, newsData }
