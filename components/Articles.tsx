@@ -12,8 +12,8 @@ export default function Articles({}: Props) {
       <h1 className='sr-only'>Articles</h1>
       <div className='mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
         <div className='relative bg-offWhite'>
-          <div className='space-y-4 p-10'>
-            <h2 className='text-2xl font-bold leading-[38px] text-black lg:text-[32px] '>
+          <div className='relative z-50 inline-block space-y-4 bg-offWhite p-10'>
+            <h2 className=' text-2xl font-bold  text-black md:leading-[38px] lg:text-[32px] '>
               Read our <br />
               articles & news
             </h2>
@@ -25,7 +25,7 @@ export default function Articles({}: Props) {
             </Link>
           </div>
           <Image
-            className='absolute bottom-0 hidden lg:block'
+            className='absolute bottom-0 right-0 z-40 w-60 sm:w-full  lg:block'
             src={Shapes}
             alt='shapes'
           />

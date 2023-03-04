@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import logoWhite from '../public/icons/Logo-white.png';
-import AppleButton from './buttons/AppleButton';
-import GooglePodcastButton from './buttons/GooglePodcast';
-import SoundcloudButton from './buttons/SoundcloudButton';
-import SpotifyButton from './buttons/SpotifyButton';
-import Sponsors from './Sponsors';
+import logoWhite from '../../public/icons/Logo-white.png';
+import AppleButton from '.././buttons/AppleButton';
+import GooglePodcastButton from '.././buttons/GooglePodcast';
+import SoundcloudButton from '.././buttons/SoundcloudButton';
+import SpotifyButton from '.././buttons/SpotifyButton';
+import Sponsors from '.././Sponsors';
 type Props = {};
 
 export default function Footer({}: Props) {

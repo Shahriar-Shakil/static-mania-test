@@ -1,13 +1,8 @@
 import type { NextPage } from 'next';
-import Link from '../components/buttons/Link';
+import AboutPage from '../components/Pages/AboutPage';
 
 const Home: NextPage = () => {
-  return (
-    <div className=' flex min-h-screen flex-col items-center justify-center py-2'>
-      <h1 className='text-green'>About page</h1>
-      <Link href='/'>home</Link>
-    </div>
-  );
+  return <AboutPage />;
 };
 
 export default Home;

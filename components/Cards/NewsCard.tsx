@@ -9,9 +9,10 @@ type Props = {
 
 export default function NewsCard({ news }: Props) {
   return (
-    <div key={news.id} className='space-y-8'>
+    <div key={news.id} className='space-y-4 md:space-y-8 '>
       <div className=''>
         <Image
+          className='w-full'
           src={news.logo.src}
           width={news.logo.width}
           height={news.logo.height}
@@ -19,7 +20,7 @@ export default function NewsCard({ news }: Props) {
         />
       </div>
       {/*card body */}
-      <div className='space-y-4'>
+      <div className='space-y-2 md:space-y-4'>
         <h2 className='text-2xl font-semibold leading-[30px] text-black'>
           {news.label}
         </h2>
