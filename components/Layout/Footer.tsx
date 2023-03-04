@@ -7,8 +7,12 @@ import GooglePodcastButton from '.././buttons/GooglePodcast';
 import SoundcloudButton from '.././buttons/SoundcloudButton';
 import SpotifyButton from '.././buttons/SpotifyButton';
 import Sponsors from '.././Sponsors';
+import { motion } from 'framer-motion';
+
 type Props = {};
 
+let pages = ['Home', 'Podcast', 'Host', 'Blog'];
+let reachUs = ['Contact', 'About'];
 export default function Footer({}: Props) {
   return (
     <div className='relative mt-[150px] lg:mt-[315px] '>
@@ -27,29 +31,41 @@ export default function Footer({}: Props) {
               <div className='text-white'>
                 <p className='text-xl font-bold leading-[30px] '>Pages</p>
                 <ul className='space-y-4 pt-8'>
-                  <li>
-                    <a href=''>Home</a>
-                  </li>
-                  <li>
-                    <a href=''>Podcast</a>
-                  </li>
-                  <li>
-                    <a href=''>Host</a>
-                  </li>
-                  <li>
-                    <a href=''>Blog</a>
-                  </li>
+                  {pages.map((page) => (
+                    <motion.li
+                      whileHover={{
+                        scale: 1.1,
+                        originX: 0,
+                      }}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 300,
+                      }}
+                      key='page'
+                    >
+                      <Link href='/'>{page}</Link>
+                    </motion.li>
+                  ))}
                 </ul>
               </div>
               <div className='text-white'>
                 <p className='text-xl font-bold leading-[30px] '>Reach Us</p>
                 <ul className='space-y-4 pt-8'>
-                  <li>
-                    <a href=''>Contact</a>
-                  </li>
-                  <li>
-                    <Link href='/about'>About</Link>
-                  </li>
+                  {reachUs.map((page) => (
+                    <motion.li
+                      whileHover={{
+                        scale: 1.1,
+                        originX: 0,
+                      }}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 300,
+                      }}
+                      key='page'
+                    >
+                      <Link href='/'>{page}</Link>
+                    </motion.li>
+                  ))}
                 </ul>
               </div>
               <div className='text-white'>

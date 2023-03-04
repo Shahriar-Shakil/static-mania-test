@@ -2,13 +2,19 @@ import Image from 'next/image';
 import React from 'react';
 import { episodesType } from '../../ts/interface';
 import IconButton from '../buttons/IconButton';
+import { motion } from 'framer-motion';
 type Props = {
   episode: episodesType;
 };
 
 export default function EpisodeCard({ episode }: Props) {
   return (
-    <div key={episode.id} className='space-y-8'>
+    <motion.div
+      whileHover={{
+        scale: 1.05,
+      }}
+      className='space-y-8'
+    >
       <div className='relative'>
         <Image
           src={episode.logo.src}
@@ -59,6 +65,6 @@ export default function EpisodeCard({ episode }: Props) {
           }
         />
       </div>
-    </div>
+    </motion.div>
   );
 }

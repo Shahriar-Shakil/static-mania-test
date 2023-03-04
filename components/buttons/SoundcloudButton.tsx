@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 type Props = {
   type: 'black' | 'white';
@@ -12,5 +13,15 @@ export default function SoundcloudButton({ className, type = 'black' }: Props) {
     ) : (
       <img src='/icons/Soundcloud-white.svg' alt='' />
     );
-  return <button className={`${className || ''} `}>{iconRender}</button>;
+  return (
+    <motion.button
+      whileHover={{
+        scale: 1.1,
+        originX: 0,
+      }}
+      className={`${className || ''} `}
+    >
+      {iconRender}
+    </motion.button>
+  );
 }

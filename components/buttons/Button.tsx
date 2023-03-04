@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 type Props = {
   className?: string;
@@ -22,11 +23,14 @@ export default function Button({
       ' rounded-[28.5px] border-2 border-blue-500 bg-blue-500 text-white hover:bg-blue-800',
   };
   return (
-    <button
+    <motion.button
+      whileTap={{
+        scale: 1.07,
+      }}
       className={` px-8  py-3 text-base font-medium leading-6 ${className} ${buttonTypes[type]} `}
       onClick={onClick}
     >
       {label}
-    </button>
+    </motion.button>
   );
 }

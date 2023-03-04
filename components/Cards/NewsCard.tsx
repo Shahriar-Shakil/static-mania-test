@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
 import { episodesType } from '../../ts/interface';
-import IconButton from '../buttons/IconButton';
+import { motion } from 'framer-motion';
+
 import Link from '../buttons/Link';
 type Props = {
   news: episodesType;
@@ -9,7 +10,12 @@ type Props = {
 
 export default function NewsCard({ news }: Props) {
   return (
-    <div key={news.id} className='space-y-4 md:space-y-8 '>
+    <motion.div
+      whileHover={{
+        scale: 1.05,
+      }}
+      className='space-y-4 md:space-y-8 '
+    >
       <div className=''>
         <Image
           className='w-full'
@@ -32,6 +38,6 @@ export default function NewsCard({ news }: Props) {
           See More
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }
