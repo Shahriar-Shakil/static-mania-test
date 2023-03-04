@@ -10,7 +10,7 @@ type Props = {};
 
 export default function HomePage({}: Props) {
   return (
-    <Layout>
+    <Layout title='Finsweet Home'>
       <CTA />
       <Features />
       <RecentEpisodes />

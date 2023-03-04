@@ -6,10 +6,10 @@ type Props = {};
 
 export default function AboutPage({}: Props) {
   return (
-    <Layout>
+    <Layout title='About Finsweet'>
       <section className='mx-auto mt-[160px] max-w-7xl px-2'>
         <div className='max-w-[480px] space-y-4 md:space-y-6 lg:space-y-8'>
-          <h2 className='text-xl font-bold lg:leading-[53px] text-black sm:text-2xl md:text-3xl lg:text-5xl'>
+          <h2 className='text-xl font-bold text-black sm:text-2xl md:text-3xl lg:text-5xl lg:leading-[53px]'>
             About Finsweet <br /> Podcast
           </h2>
           <p className='text-normal text-base text-black '>
