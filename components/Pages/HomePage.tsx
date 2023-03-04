@@ -5,6 +5,7 @@ import CTA from '../CTA';
 import Features from '../Features';
 import Footer from '../Footer';
 import RecentEpisodes from '../RecentEpisodes';
+import Sponsors from '../Sponsors';
 
 type Props = {};
 
