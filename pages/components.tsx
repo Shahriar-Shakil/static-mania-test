@@ -7,7 +7,7 @@ import SpotifyButton from '../components/buttons/SpotifyButton';
 import IconButton from '../components/buttons/IconButton';
 import Link from '../components/buttons/Link';
 
-const Home: NextPage = () => {
+const Components: NextPage = () => {
   return (
     <div className=' flex min-h-screen flex-col items-center justify-center py-2'>
       <h1 className='text-green'>Hello world</h1>
@@ -55,4 +55,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Components;

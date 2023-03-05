@@ -2,13 +2,19 @@ import Link from '../buttons/Link';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
+import { fadeIn } from '../../variants';
 
 type Props = {};
 
 export default function Navbar({}: Props) {
   const path = usePathname();
   return (
-    <motion.header className='mx-auto max-w-7xl bg-white py-5 px-2'>
+    <motion.header
+      variants={fadeIn('down')}
+      initial='initial'
+      animate='animate'
+      className='mx-auto max-w-7xl bg-white py-5 px-2'
+    >
       <div className='flex items-center justify-between'>
         <Link href='/'>
           <motion.img

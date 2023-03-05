@@ -3,18 +3,13 @@ import Button from './buttons/Button';
 import EpisodeCard from './Cards/EpisodeCard';
 import { EpisodeData } from '../data/episodes';
 import { motion } from 'framer-motion';
+import { staggerContainer } from '../variants';
 
 type Props = {};
 
 export default function RecentEpisodes({}: Props) {
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: false }}
-      transition={{ duration: 0.8 }}
-      className='mx-auto mt-[50px] max-w-7xl bg-white px-2 lg:mt-[145px]'
-    >
+    <section className='mx-auto mt-[50px] max-w-7xl bg-white px-2 lg:mt-[145px]'>
       <h2 className='sr-only'>Recent Episodes</h2>
       <div className='flex justify-center lg:justify-between'>
         <div className='space-y-2 text-center lg:text-left'>
@@ -33,10 +28,18 @@ export default function RecentEpisodes({}: Props) {
         />
       </div>
       <div className='mt-16 grid grid-cols-2 gap-4  lg:grid-cols-3'>
-        {EpisodeData?.map((episode) => (
-          <EpisodeCard episode={episode} key={episode.id} />
+        {EpisodeData?.map((episode, i) => (
+          <motion.div
+            variants={staggerContainer(i)}
+            initial='initial'
+            whileInView='whileInView'
+            viewport={{ once: true }}
+            key={episode.label}
+          >
+            <EpisodeCard episode={episode} />
+          </motion.div>
         ))}
       </div>
-    </motion.section>
+    </section>
   );
 }

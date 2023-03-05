@@ -8,6 +8,7 @@ import SoundcloudButton from '.././buttons/SoundcloudButton';
 import SpotifyButton from '.././buttons/SpotifyButton';
 import Sponsors from '.././Sponsors';
 import { motion } from 'framer-motion';
+import { staggerContainer, staggerForFooterMenu } from '../../variants';
 
 type Props = {};
 
@@ -31,8 +32,12 @@ export default function Footer({}: Props) {
               <div className='text-white'>
                 <p className='text-xl font-bold leading-[30px] '>Pages</p>
                 <ul className='space-y-4 pt-8'>
-                  {pages.map((page) => (
+                  {pages.map((page, i) => (
                     <motion.li
+                      variants={staggerForFooterMenu(i)}
+                      initial='initial'
+                      whileInView='whileInView'
+                      viewport={{ once: true }}
                       whileHover={{
                         scale: 1.1,
                         originX: 0,
@@ -41,7 +46,7 @@ export default function Footer({}: Props) {
                         type: 'spring',
                         stiffness: 300,
                       }}
-                      key='page'
+                      key={page}
                     >
                       <Link href='/'>{page}</Link>
                     </motion.li>
@@ -51,8 +56,12 @@ export default function Footer({}: Props) {
               <div className='text-white'>
                 <p className='text-xl font-bold leading-[30px] '>Reach Us</p>
                 <ul className='space-y-4 pt-8'>
-                  {reachUs.map((page) => (
+                  {reachUs.map((page, i) => (
                     <motion.li
+                      variants={staggerForFooterMenu(i)}
+                      initial='initial'
+                      whileInView='whileInView'
+                      viewport={{ once: true }}
                       whileHover={{
                         scale: 1.1,
                         originX: 0,
@@ -61,7 +70,7 @@ export default function Footer({}: Props) {
                         type: 'spring',
                         stiffness: 300,
                       }}
-                      key='page'
+                      key={page}
                     >
                       <Link href='/'>{page}</Link>
                     </motion.li>

@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
 import AboutPage from '../components/Pages/AboutPage';
 
-const Home: NextPage = () => {
+const About: NextPage = () => {
   return <AboutPage />;
 };
 
-export default Home;
+export default About;

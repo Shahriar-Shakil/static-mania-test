@@ -5,18 +5,13 @@ import NewsCard from './Cards/NewsCard';
 import Image from 'next/image';
 import Shapes from '../public/images/Shapes.png';
 import { motion } from 'framer-motion';
+import { staggerContainer } from '../variants';
 
 type Props = {};
 
 export default function Articles({}: Props) {
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: false }}
-      transition={{ duration: 0.8 }}
-      className='mx-auto mt-[50px] max-w-7xl bg-white px-2 lg:mt-[120px]'
-    >
+    <section className='mx-auto mt-[50px] max-w-7xl bg-white px-2 lg:mt-[120px]'>
       <h1 className='sr-only'>Articles</h1>
       <div className='mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3'>
         <div className='relative bg-offWhite'>
@@ -46,10 +41,18 @@ export default function Articles({}: Props) {
             />
           </motion.div>
         </div>
-        {newsData?.map((news) => (
-          <NewsCard key={news.id} news={news} />
+        {newsData?.map((news, i) => (
+          <motion.div
+            variants={staggerContainer(i)}
+            initial='initial'
+            whileInView='whileInView'
+            viewport={{ once: true }}
+            key={news.label}
+          >
+            <NewsCard news={news} />
+          </motion.div>
         ))}
       </div>
-    </motion.section>
+    </section>
   );
 }

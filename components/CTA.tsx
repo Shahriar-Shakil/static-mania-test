@@ -8,12 +8,7 @@ export default function CTA() {
   return (
     <section className='bg-white'>
       <div className='mx-auto mt-[100px] grid max-w-5xl grid-cols-1 lg:grid-cols-2'>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5 }}
-          className='space-y-4 px-4 lg:space-y-8 lg:pr-8'
-        >
+        <motion.div className='space-y-4 px-4 lg:space-y-8 lg:pr-8'>
           <h2 className='text-3xl font-bold tracking-tight text-black lg:text-5xl lg:leading-[53px] '>
             Become The Her
             <br />
@@ -36,10 +31,15 @@ export default function CTA() {
           </div>
         </motion.div>
         <motion.div
-          initial={{ x: 0, y: 100 }}
-          whileInView={{ x: 0, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.8, type: 'spring', stiffness: 200 }}
+          initial={{ y: -1000 }}
+          animate={{
+            y: [10, 0, 10],
+            transition: {
+              duration: 1.6,
+              ease: 'linear',
+              repeat: Infinity,
+            },
+          }}
           className='hidden items-center lg:flex'
         >
           <Image className='ml-auto' src={audioTrack} alt='cta Audio visual' />
