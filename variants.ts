@@ -47,19 +47,19 @@ export const staggerForFooterMenu = (delayIncrement: number): Variants => {
     return {
         initial: {
             opacity: 0,
-            x: delayIncrement % 2 === 0 ? -100 : 100,
+            // x: delayIncrement % 2 === 0 ? -100 : 100,
             y: -50
         },
         animate: {
             opacity: 1,
-            x: 0,
+            // x: 0,
             y: 0
 
 
         },
         whileInView: {
             opacity: 1,
-            x: 0,
+            // x: 0,
             y: 0,
             transition: {
                 delay: delayIncrement * 0.4,
